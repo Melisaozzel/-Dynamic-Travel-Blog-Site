@@ -7,9 +7,12 @@ username: melisa, password: 123
 
 Website Link: http://www.agliophobia.somee.com/Default/Index
 
-Blog Page: You can add comments.
+Blog Page: If you click Blogs, you can see and add comments.
 
-https://user-images.githubusercontent.com/56073734/161717944-dcb6abdc-57b4-4b3d-8941-fa782f149489.mp4
+
+
+https://user-images.githubusercontent.com/56073734/161719766-102f6fc0-47b5-42a5-ae40-717e18a772e9.mp4
+
 
 
 Login Page:
