@@ -24,7 +24,7 @@ Admin Panel: You can add, edit and delete your blogs and blogs comments.
 ![image](https://user-images.githubusercontent.com/56073734/161715284-6a0f207d-99b9-4950-a76d-b426f5342c6e.png)
 
 
-![image](https://user-images.githubusercontent.com/56073734/161715341-e709f055-1e81-43ef-b2e5-af3ed44497e6.png)
+![image](https://user-images.githubusercontent.com/56073734/161720243-613b6e13-30ac-43f2-95f0-a75cb6b24fcc.png)
 
 
 ![image](https://user-images.githubusercontent.com/56073734/161715189-caad1156-5f9c-44aa-8a4d-40c0e0ac9f27.png)
