@@ -1,0 +1,19 @@
+﻿
+@using TravelTrip.Models.Sınıflar;
+@model List<Blog>
+<h4>Our Best Places</h4>
+<div class="container">
+
+    @foreach (var x in Model)
+    {
+    <div class="row">
+        <div class="col-md-3">
+            <img src="@x.BlogImage" alt="" style="width:20rem; height:10rem"  />
+        </div>
+        <div class="col-md-6">
+            <p>@x.Content.Substring(0, 98)</p>
+        </div>
+        <div class="clear"></div>
+    </div>
+            }
+        </div>

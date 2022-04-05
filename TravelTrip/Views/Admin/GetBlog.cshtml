@@ -1,0 +1,32 @@
+﻿@model TravelTrip.Models.Sınıflar.Blog
+
+@{
+    ViewBag.Title = "GetBlog";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Update Blogs</h2>
+<br />
+@using (Html.BeginForm("UpdateBlog", "Admin", FormMethod.Post))
+{
+
+    @Html.LabelFor(x => x.ID)
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" ,@readonly="readonly"})
+    <br />
+
+    @Html.LabelFor(x => x.Title)
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Date)
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.BlogImage)
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Content)
+    @Html.TextAreaFor(x => x.Content, 15, 1, new { @class = "form-control" })
+    <br />
+
+    <button class=" btn btn-primary"> Add Blog</button>
+}
+

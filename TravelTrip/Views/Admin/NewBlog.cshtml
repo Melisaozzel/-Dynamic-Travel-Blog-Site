@@ -1,0 +1,24 @@
+﻿@model TravelTrip.Models.Sınıflar.Blog
+@{
+    ViewBag.Title = "NewBlog";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>NewBlog </h2>
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.Title)
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Date)
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Content)
+    @Html.TextBoxFor(x => x.Content, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.BlogImage)
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+    <br />
+    <button class=" btn btn-primary"> Add Blog</button>
+</form>
+

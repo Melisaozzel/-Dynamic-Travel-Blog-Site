@@ -1,0 +1,13 @@
+﻿@using TravelTrip.Models.Sınıflar;
+@model List<Blog>
+
+
+<h4>Most Popular 10 Blogs</h4>
+<ul class="list list-pad">
+    @{ int i = 1;}
+    @foreach (var y in Model)
+    {
+    <li class="list-bg"><span>@i.</span><a href="/Blog/BlogDetay/@y.ID">@y.Title</a></li>
+        i++;
+    }
+</ul>

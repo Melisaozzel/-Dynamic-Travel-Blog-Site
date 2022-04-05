@@ -1,0 +1,226 @@
+﻿@model TravelTrip.Models.Sınıflar.BlogComment
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <link href="~/web/css/bootstrap2.css" rel='stylesheet' type='text/css' />
+    <link href="~/web/css/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+    <style>
+
+        .small {
+            font-size: 10px;
+            line-height: 18px;
+        }
+
+        .testbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: inherit;
+            padding: 3px;
+        }
+
+        form {
+            width: 100%;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 2px 5px #ccc;
+        }
+
+        input {
+            width: calc(100% - 10px);
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            vertical-align: middle;
+        }
+
+            input:hover, textarea:hover, select:hover {
+                outline: none;
+                border: 1px solid #095484;
+                background: #e6eef7;
+            }
+
+        .title-block select, .title-block input {
+            margin-bottom: 10px;
+        }
+
+        select {
+            padding: 7px 0;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            background: transparent;
+        }
+
+        select, table {
+            width: 100%;
+        }
+
+        option {
+            background: #fff;
+        }
+
+        .day-visited, .time-visited {
+            position: relative;
+        }
+
+        input[type="date"]::-webkit-inner-spin-button {
+            display: none;
+        }
+
+        input[type="time"]::-webkit-inner-spin-button {
+            margin: 2px 22px 0 0;
+        }
+
+        .day-visited i, .time-visited i, input[type="date"]::-webkit-calendar-picker-indicator {
+            position: absolute;
+            top: 8px;
+            font-size: 20px;
+        }
+
+        .day-visited i, .time-visited i {
+            right: 5px;
+            z-index: 1;
+            color: #a9a9a9;
+        }
+
+        [type="date"]::-webkit-calendar-picker-indicator {
+            right: 0;
+            z-index: 2;
+            opacity: 0;
+        }
+
+        .question-answer label {
+            display: block;
+            padding: 0 20px 10px 0;
+        }
+
+        .question-answer input {
+            width: auto;
+            margin-top: -2px;
+        }
+
+        th, td {
+            width: 18%;
+            padding: 15px 0;
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+            vertical-align: unset;
+            line-height: 18px;
+            font-weight: 400;
+            word-break: break-all;
+        }
+
+        .first-col {
+            width: 25%;
+            text-align: left;
+        }
+
+        textarea {
+            width: calc(100% - 6px);
+        }
+
+        .btn-block {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        button {
+            width: 150px;
+            padding: 10px;
+            border: none;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            background-color: black;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #0666a3;
+            }
+
+        .title-block select {
+            width: 30%;
+            margin-bottom: 0;
+        }
+
+        .title-block input {
+            width: 31%;
+            margin-bottom: 0;
+        }
+
+        th, td {
+            word-break: keep-all;
+        }
+        }
+    </style>
+</head>
+<body>
+    <!---header---->
+    <div class="header">
+
+        <!--/header-->
+        <div class="single" style="margin-top:15rem;">
+            <div class="container">
+                <div class="col-md-8 single-main">
+                    @foreach (var x in Model.Deger1)
+                    {
+                        <div class="single-grid">
+                            <h3><a href="/Blog/BlogDetay/@x.ID"> @x.Title</a></h3>
+                            
+                            <img style="margin-bottom:20px" src="@x.BlogImage" alt=""  class="img-responsive"/>
+                            <p>
+                             @x.Content;
+                                <br /><br />
+
+                            </p>
+                        </div>
+                    }
+
+                    <ul class="comment-list">
+                        <h5 class="post-author_head">Written by <a href="#" title="Posts by admin" rel="author">admin</a></h5>
+
+                    </ul>
+                  
+                </div>
+
+                <div class="col-md-4 side-content">
+                    <div class="recent">
+                        <h3>RECENT POSTS</h3>
+                        @foreach (var y in Model.Deger3)
+                        {
+                            <ul>
+                                <li><a href="/Blog/BlogDetay/@y.ID">@y.Title</a></li>
+                             
+                            </ul>}
+
+                    </div>
+                    <div class="comments">
+                        <h3>RECENT COMMENTS</h3>
+                        <ul>
+                            <li><a href="#">Amada Doe </a> on <a href="#">Hello World!</a></li>
+                            <li><a href="#">Peter Doe </a> on <a href="#"> Photography</a></li>
+                            <li><a href="#">Steve Roberts  </a> on <a href="#">HTML5/CSS3</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+
+    </html>

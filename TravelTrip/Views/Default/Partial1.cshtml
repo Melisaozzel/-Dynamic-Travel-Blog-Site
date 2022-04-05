@@ -1,0 +1,25 @@
+﻿@using TravelTrip.Models.Sınıflar;
+@model List<Blog>
+    
+<div class="row" style="margin-top:2rem">
+    @foreach (var x in Model)
+    {
+    <div class="col-md-4">
+        <div class="col">
+            <div class="row-md-1" >
+                <img src="@x.BlogImage" style="width:38rem; height:20rem"  alt="" />
+            </div>
+            <div class="row-md-3">
+
+                <h3 style="margin-top:0.5rem">@x.Title</h3>
+                <p>@x.Content</p>
+                <span class="doller">@x.Date.ToString("dd.MM.yy")</span>
+
+                <p><a href="/Blog/BlogDetay/@x.ID"><span class="read">Read More >></span></a></p>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    }
+</div>

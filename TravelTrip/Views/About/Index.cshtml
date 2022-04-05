@@ -1,0 +1,46 @@
+﻿@using TravelTrip.Models.Sınıflar
+@model List<Abt>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+
+
+<div class="fh5co-section" style="margin-top:100px;">
+    <div class="container">
+        <div class="row">
+            <div class="fh5co text-center" style="MAR">
+                <div class="desc ">
+                    <h2 style="color:white ;  font-size: 70px;margin-bottom:7rem" ;>ABOUT</h2>
+                    <div class="col-md-6 fh5co-news">
+                        <div class="row text-center" style="margin:auto; padding:2rem">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <h3>Adventure awaits, go find it</h3>
+                                        @foreach (var x in Model)
+                                        {<p>@x.Conts</p>
+                                        }
+
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 fh5co-testimonial">
+                        <img src="~/web/images/About.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co" class="img-responsive mb20">
+                        <img src="~/web/images/About2.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+    </div>
+</div>
+
+
